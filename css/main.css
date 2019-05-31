@@ -12,7 +12,12 @@ body {
 
 nav ul {
   list-style-type: none;
-  display: none; /* Hides the Navigation until we add a toggle for nav-button */
+  transition: all 1s ease;
+}
+
+.toggle {
+  display: none;
+  transition: all;
 }
 
 nav ul a {
