@@ -70,6 +70,7 @@ header { /* Flex Parent */
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
+  color: black;
 }
 
 nav {
