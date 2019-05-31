@@ -12,6 +12,7 @@ body {
 
 nav ul {
   list-style-type: none;
+  display: none; /* Hides the Navigation until we add a toggle for nav-button */
 }
 
 nav ul a {
@@ -34,6 +35,103 @@ nav ul a:hover {
   padding: 25px;
 }
 
-.nav-container img {
+.nav-container { /* Flex Parent */
+  padding: 5px 20px; /* Top/Bottom Left/Right */
+  background-color: #474747;
+  border-bottom: 3px solid #42F4EB;
+  display: flex;
+  justify-content: space-between;
+}
 
+.nav-container img {
+  align-self: center;
+}
+
+.nav-btn {
+  padding: 2px;
+  display: inline-block;
+  border: 2px solid #42F4EB;
+  align-self: center;
+}
+
+.bar {
+  width: 30px;
+  height: 2px;
+  margin: 4px;
+  background-color: #42F4EB;
+}
+
+header { /* Flex Parent */
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../imgs/sub2.PNG);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  /* Grow Shrink Basis */
+  flex: 0 0 auto;
+}
+
+.banner {
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.banner img {
+  transition: transform 1.5s ease;
+}
+
+.banner img:hover {
+   transform: scale(1.05);
+}
+
+.banner h1 {
+  font-size: 50px;
+  color: black;
+}
+
+.banner span.poly {
+  color: #42F4EB;
+  transition: transform 0.5s ease;
+}
+
+.banner span.poly:hover {
+  display: inline-block;
+  transform: scale(1.1);
+}
+
+.banner h3 {
+  color: black;
+}
+
+.banner-icons {
+  padding: 20px;
+}
+
+.banner-icons a {
+  display: inline-block;
+  font-size: 25px;
+  color: black;
+  transition: color 1s ease, transform 0.5s ease;
+}
+
+.banner-icons a:hover {
+    color: #42F4EB;
+    transform: scale(1.2);
+}
+
+/* Keep Navigation Fixed on Screen */
+
+nav {
+  position: fixed;
+  width: 100vw; /* Keep Full Width */
+  z-index: 10; /* Keep Above Other Elements */
 }
