@@ -200,6 +200,8 @@ nav {
 }
 
 .service { /* Box Model Understanding is important here */
+  display: flex;
+  flex-direction: column;
   color: white;
   padding: 25px;
   margin: 40px;
@@ -239,6 +241,7 @@ nav {
   color: #83cd29;
 }
 
+/* Using SVGs - https://css-tricks.com/using-svg/ */
 .service-icon img {
   width: 95px;
 }
