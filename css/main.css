@@ -17,7 +17,7 @@ nav ul {
   list-style-type: none;
   max-height: 0;
   opacity: 0;
-  transition: all .5s ease-in-out;
+  transition: all .25s ease-in-out;
   overflow: hidden;
 }
 
@@ -169,7 +169,7 @@ nav {
   }
 
   nav ul li {
-    padding: 0px 10px;
+    padding: 0 10px;
   }
 
   nav ul a {
@@ -188,7 +188,7 @@ nav {
 /** Services Styles */
 
 .services {
-  min-height: 50vh;
+  min-height: 55vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -244,4 +244,81 @@ nav {
 /* Using SVGs - https://css-tricks.com/using-svg/ */
 .service-icon img {
   width: 95px;
+}
+
+/*** Projects Styles  */
+
+.projects {
+  padding: 0 0 100px 0;
+  background-color: #f5f3f5;
+}
+
+.title {
+  padding: 50px 0;
+}
+
+.title h2 {
+  font-size: 35px;
+  text-align: center;
+}
+
+.title-underline {
+  background-color: #42F4EB;
+  width: 100px;
+  height: 4px;
+  margin: 10px auto; /* Centers it */
+}
+
+.project {
+  background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9));
+  overflow: hidden;
+}
+
+.project img {
+  width: 100%; /* Standard for Images */
+  height: 100%;
+  display: block; /* Gets rid of space between images */
+  transition: opacity 2s ease, transform 2s ease;
+}
+
+.project img:hover {
+  opacity: 0.3;
+  cursor: pointer;
+  transform: scale(1.3);
+}
+/* Media Query 576 - 776 - 992 */
+/** Flexbox Grid Solution
+@media screen and (min-width:576px) {
+    .projects-center {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .project {
+      /* Grow Shrink Basis /
+      flex: 0 0 calc(50%);
+    }
+}
+
+@media screen and (min-width:992px) {
+    .project {
+      /* Grow Shrink Basis /
+      flex: 0 0 calc(33.3333%);
+    }
+}
+*/
+
+/* CSS Grid Solution */
+@media screen and (min-width: 576px) {
+  .projects-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .projects-center {
+    /* CSS Grid is already set */
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
