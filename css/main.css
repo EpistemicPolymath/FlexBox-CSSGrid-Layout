@@ -10,7 +10,7 @@ body {
 
 /** Header styles */
 /*
-  Toggle CSS3 Transitions Solutions:
+  Toggle CSS3 Transitions Solution:
   https://stackoverflow.com/a/3332179/5941661
  */
 nav ul {
@@ -49,6 +49,7 @@ nav ul a:hover {
 .nav-container { /* Flex Parent */
   padding: 5px 20px; /* Top/Bottom Left/Right */
   background-color: #474747;
+  background-color: rgba(0, 0, 0, 0.8);
   border-bottom: 3px solid #42F4EB;
   display: flex;
   justify-content: space-between;
@@ -145,4 +146,41 @@ nav {
   position: fixed;
   width: 100vw; /* Keep Full Width */
   z-index: 10; /* Keep Above Other Elements */
+}
+
+/** Media Query for the Navigation
+  When the screen is at 776px these are the rules...
+*/
+@media screen and (min-width:776px) {
+  .nav-container { /* Refers to Brain icon and Menu Button */
+    display: none;
+  }
+
+  nav ul {
+    display: flex;
+    /* Need to max-height and opacity to counter our above transitions */
+    max-height: 9999px;
+    opacity: 1;
+    flex-wrap: wrap; /* When the screen gets smaller they wrap */
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-bottom: 3px solid #42F4EB;
+  }
+
+  nav ul li {
+    padding: 0px 10px;
+  }
+
+  nav ul a {
+    background: transparent;
+    text-transform: uppercase;
+  }
+
+  nav ul a:hover {
+    background-color: transparent;
+    color: white;
+    color: rgba(66,244, 235, 0.5);
+    padding: 20px; /* Default Padding so no change */
+  }
 }
