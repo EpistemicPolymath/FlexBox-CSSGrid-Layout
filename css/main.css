@@ -9,15 +9,21 @@ body {
 }
 
 /** Header styles */
-
+/*
+  Toggle CSS3 Transitions Solutions:
+  https://stackoverflow.com/a/3332179/5941661
+ */
 nav ul {
   list-style-type: none;
-  transition: all 1s ease;
+  transition: all .5s ease-in-out;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
 }
 
-.toggle {
-  display: none;
-  transition: all;
+nav ul.toggle {
+  max-height: 9999px;
+  opacity: 1;
 }
 
 nav ul a {

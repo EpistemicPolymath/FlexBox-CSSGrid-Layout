@@ -2,25 +2,9 @@
 // Navigation Menu Button Toggle
 const navToggleElement = document.querySelector('.nav-btn');
 
-
-const toggleClass = (element, className) => {
-    if (!element || !className) {
-        return;
-    }
-
-    let classString = element.className;
-    let nameIndex = classString.indexOf(className);
-
-    if (nameIndex == -1) {
-        classString += ' ' + className;
-    } else {
-        classString = classString.substr(0, nameIndex) + classString.substr(nameIndex+className.length);
-      }
-
-      element.className = classString;
-}
-
+// On click of the Menu Button show the navigation menu
 navToggleElement.onclick = () => {
     navList = document.querySelector('nav ul');
-    toggleClass(navList, 'toggle');
+    // https://dommagnifi.co/2019-05-06-basic-class-toggle-with-vanilla-js-es6/
+    navList.classList.toggle('toggle');
 }
