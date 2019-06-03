@@ -184,3 +184,61 @@ nav {
     padding: 20px; /* Default Padding so no change */
   }
 }
+
+/** Services Styles */
+
+.services {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-center {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.service { /* Box Model Understanding is important here */
+  color: white;
+  padding: 25px;
+  margin: 40px;
+}
+
+.service-icon {
+  align-self: center;
+  font-size: 95px;
+  transition: transform 0.5s ease;
+}
+
+.service-icon:hover {
+  transform: scale(1.2);
+}
+
+.service-text {
+  align-self: center;
+}
+
+.service-icon .fa-html5 {
+  color: #e34f26;
+}
+
+.service-icon .fa-css3-alt {
+  color: #167dbe;
+}
+
+.service-icon .fa-js {
+  color: #f0db4f;
+}
+
+.service-icon .fa-npm {
+  color: #cb3837;
+}
+
+.service-icon .fa-node {
+  color: #83cd29;
+}
+
+.service-icon img {
+  width: 95px;
+}
