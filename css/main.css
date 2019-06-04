@@ -148,7 +148,7 @@ nav {
   z-index: 10; /* Keep Above Other Elements */
 }
 
-/** Media Query for the Navigation
+/** Media Query for the Responsive Navigation
   When the screen is at 776px these are the rules...
 */
 @media screen and (min-width:776px) {
@@ -308,7 +308,7 @@ nav {
 }
 */
 
-/* CSS Grid Solution */
+/* CSS Grid Responsive Solution */
 @media screen and (min-width: 576px) {
   .projects-center {
     display: grid;
@@ -321,4 +321,67 @@ nav {
     /* CSS Grid is already set */
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+/** About Me Styles  */
+
+.about {
+  min-height: 100vh;
+  padding: 100px 0;
+  background: url(../imgs/nature/cascade-environment-falls-612999.jpg)center/cover fixed no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-card {
+  /* background-color: rgba(255,255,255,0.6); */
+  background-color: rgba(26, 27, 24, 0.75);
+  color: white;
+  text-align: center;
+  padding: 60px 50px;
+}
+
+.about-card h3 {
+  font-size: 40px;
+  text-transform: capitalize;
+}
+
+.about-card .fa-user {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(27, 27, 28);
+  padding: 20px 20px;
+  font-size: 60px;
+  color: white;
+  margin: 20px 0;
+  transition: transform 1s ease;
+}
+
+.about-card .fa-user:hover {
+  transform: scale(1.15);
+}
+
+.about-card p {
+  line-height: 2;
+}
+
+/* Responsive About Me Card */
+@media screen and (min-width:776px) {
+  .about-card {
+    max-width: 50%;
+    border-radius: 30px;
+  }
+
+  .about-card p {
+    max-width: 70%;
+    margin: 0 auto; /* Centers */
+  }
+}
+
+/** Filler Styles  */
+.filler {
+  min-height: 60vh;
+  background: linear-gradient(to right, rgb(25, 26, 27), rgb(66, 244, 235));
 }
